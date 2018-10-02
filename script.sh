@@ -1,3 +1,3 @@
 #!/bin/bash
-result=$(expect /etc/mrtg/SSHGaspa/scriptSSH|tr -d " "|grep RXbytes:)
+result=$(expect "$(pwd)/scriptSSH" | tr -d " " | grep -P "RXbytes:")
 echo "$result"
